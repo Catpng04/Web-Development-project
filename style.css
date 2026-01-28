@@ -1,0 +1,219 @@
+:root {
+    --bg-body: #0f172a;
+    --primary: #38bdf8;
+    --primary-soft: rgba(56,189,248,0.25);
+    --secondary: #94a3b8;
+    --white: #020617;
+    --danger: #f87171;
+    --text-dark: #e5e7eb;
+
+    --radius-lg: 14px;
+    --radius-sm: 8px;
+
+    --shadow-sm: 0 0 10px rgba(56,189,248,0.2);
+    --shadow-md: 0 0 25px rgba(56,189,248,0.35);
+}
+
+/* ================= GLOBAL ================= */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: radial-gradient(circle at top, #020617, #000000 70%);
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+.main-header {
+    background: linear-gradient(135deg, #020617, #020617);
+    color: var(--primary);
+    padding: 2.5rem 1rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(56,189,248,0.35);
+    box-shadow: var(--shadow-md);
+}
+
+/* ================= LAYOUT ================= */
+.container {
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    padding: 0 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 2rem;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: linear-gradient(
+        180deg,
+        rgba(2,6,23,0.95),
+        rgba(2,6,23,0.85)
+    );
+    padding: 1.75rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(56,189,248,0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.card-title {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(56,189,248,0.3);
+    padding-bottom: 0.75rem;
+}
+
+/* ================= FORM ================= */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--secondary);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid rgba(56,189,248,0.35);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    background: rgba(2,6,23,0.9);
+    color: var(--text-dark);
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+/* ================= BUTTON ================= */
+.btn-primary {
+    background: linear-gradient(135deg, #38bdf8, #22d3ee);
+    color: #020617;
+    border: none;
+    padding: 0.85rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 0 20px rgba(56,189,248,0.5);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 35px rgba(56,189,248,0.75);
+}
+
+/* ================= LIST ================= */
+.expense-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.4rem;
+    background: rgba(56,189,248,0.04);
+    border: 1px solid rgba(56,189,248,0.15);
+    transition: background 0.15s ease;
+}
+
+.expense-item:hover {
+    background: rgba(56,189,248,0.1);
+}
+
+.expense-item strong {
+    font-weight: 600;
+}
+
+/* ================= DELETE ================= */
+.delete-btn {
+    color: #020617;
+    background: linear-gradient(135deg, #f87171, #ef4444);
+    border: none;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: 0 0 12px rgba(248,113,113,0.6);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.delete-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(248,113,113,0.9);
+}
+
+/* ================= INSIGHTS ================= */
+.total-box {
+    margin-top: auto;
+    text-align: center;
+    padding: 1.4rem;
+    background: linear-gradient(
+        135deg,
+        rgba(56,189,248,0.18),
+        rgba(56,189,248,0.08)
+    );
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(56,189,248,0.35);
+}
+
+.total-label {
+    display: block;
+    color: var(--secondary);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.total-value {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: var(--primary);
+}
