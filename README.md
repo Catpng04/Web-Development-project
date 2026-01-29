@@ -18,7 +18,7 @@ A sleek, dark-themed financial dashboard designed for personal budget management
 ---
 
 ## 📂 Project Structure
-```text
+
 ├── expense-tracker/
 │   ├── index.html
 │   ├── style.css
