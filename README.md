@@ -18,10 +18,14 @@ A sleek, dark-themed financial dashboard designed for personal budget management
 ---
 
 ## 📂 Project Structure
-
+```text
 ├── expense-tracker/
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
 └── README.md
+```
+
 <img width="794" height="909" alt="image" src="https://github.com/user-attachments/assets/4479338e-9362-4aeb-8d9e-2217710abb75" />
+
+
